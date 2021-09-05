@@ -5,24 +5,20 @@
   --heliotrope: #456268;
 }
 
-/* set content highlight color and background */
-::selection {
-  background-color: var(--bright-turquoise);
-  color: var(--outer-space);
-}
-
 html {
   font-size: 62.5%;
 }
 
 header {
+  z-index: 2;
   flex: auto;
-  position: static;
+  position: sticky;
   top: 0;
+  height: 100%;
   width: 100%;
-  margin: 0;
   text-align: left;
   border-bottom: 10px ridge #457b9d;
+  opacity: 1;
 }
 
 header h1.page-title {
@@ -34,7 +30,6 @@ body {
   display: flex;
   /* Forces elements to the next line if they don't fit */
   flex-wrap: wrap;
-  margin-top: 0.5%;
   /* set body font size to 1.75rem, which is 1.75x more than the font-size of 10px, making it 17.5px  */
   font-size: 1.75rem;
   line-height: 1.5;
@@ -91,13 +86,17 @@ img {
 }
 
 main {
+ display:flex;
+ flex-direction: column 2;
+
   width: 96%;
   margin: 1rem auto;
   text-align: center;
+  top: 0 auto;
+  padding: 2.5rem;
 }
 
 section {
-  position: sticky;
   top: 0 auto;
   width: 96%;
   margin: 0 auto;
@@ -130,40 +129,22 @@ li a:hover {
   background-color: #8ec5e7;
 }
 
-footer {
-  display: flexbox;
-  position: relative;
-  float: none;
-  bottom: 0px;
-  margin: 0;
-  text-align: center;
-  color: white;
-  background-color: #1d3557;
-  border-style: ridge;
-  border-color: #1d3557;
-  border-width: 2.5px;
-  border-radius: 8px;
-}
+
 
 /* create our main grid with flexbox, use negative margins to offset the padding on the .card-column class */
 .row {
   display: flex;
   flex-wrap: wrap;
   flex-direction: column;
-  justify-content: center;
+  justify-content: left;
   align-content: left;
   margin-left: -1.5rem;
   margin-right: -1.5rem;
 }
 
-.row .justify-center {
-  justify-content: center;
-  align-content: center;
-}
 
 #hero {
   display: flexbox;
-  position: sticky;
   float: none;
   background-image: url("covid.jpg");
   background-position: center;
@@ -183,7 +164,7 @@ footer {
 
 /* using a mobile-first approach, set base column width to be 100% and we'll update it using media queries for larger screen sizes */
 .card-column {
-  flex: 1 0 100%;
+  display: flex;
   padding: 1.5rem;
   /* when the screen resizes, make it so our columns don't jump in size */
   transition: flex-basis 500ms linear;
@@ -192,14 +173,17 @@ footer {
 
 /* make each code card a flexbox column to align and justify content within it */
 .code-card {
+  top: 0 auto;
+  width: 96%;
+  margin: 0 auto;
+  padding: 2.5rem;
+  text-align: center;
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
   min-height: 100%;
   padding: 2rem;
   color: var(--heliotrope);
-  width: 600px;
-  height: 300px;
 }
 
 .code-card .card-header {
@@ -246,32 +230,6 @@ footer {
   margin-right: 0;
 }
 
-/* Style time text */
-.time-right {
-  float: right;
-  color: #aaa;
-}
-
-/* Style time text */
-.time-left {
-  float: left;
-  color: #999;
-}
-
-/* Button used to open the chat form - fixed at the bottom of the page */
-.open-button {
-  background-color: #555;
-  color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  opacity: 0.8;
-  position: fixed;
-  bottom: 23px;
-  right: 28px;
-  width: 280px;
-}
-
 /* textarea */
 .form-container textarea {
   width: 90%;
@@ -288,30 +246,20 @@ footer {
   outline: none;
 }
 
-/* Set a style for the submit/login button */
-.form-container .btn {
-  background-color: #457b9d;
+footer {
+  display: flexbox;
+  position: relative;
+  float: none;
+  bottom: 0px;
+  margin: 0;
+  text-align: center;
   color: white;
-  padding: 16px 20px;
-  border: none;
-  cursor: pointer;
-  width: 100%;
-  margin-bottom: 10px;
-  opacity: 0.8;
+  background-color: #1d3557;
+  border-style: ridge;
+  border-color: #1d3557;
+  border-width: 2.5px;
+  border-radius: 8px;
 }
-
-/* Add a red background color to the cancel button */
-.form-container .cancel {
-  background-color: red;
-}
-
-/* Add some hover effects to buttons */
-.form-container .btn:hover,
-.open-button:hover {
-  opacity: 1;
-}
-/* end of chatbox*/
-
 /* using a mobile-first approach, use `min-width` values going from narrow -> wide for a responsive design */
 @media screen and (min-width: 768px) {
   /* on tablets, set columns to only be 50% of the width and not grow */
