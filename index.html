@@ -1,177 +1,209 @@
-
 <!DOCTYPE html>
-<html lang="en">
+<html>
 
 <head>
-
-    <meta charset="UTF-8">
-
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <title>Covid-Co-pilot</title>
-
-    <link rel="stylesheet" href="style.css" />
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=STIX+Two+Text&display=swap" rel="stylesheet">
-
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Covid-Co-pilot</title>
+  <script src="https://kit.fontawesome.com/b89d79f88d.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
+  <link rel="stylesheet" src="style.css">
 </head>
 
 <body>
 
-    <header>
+  <!-- Hero head: will stick at the top -->
 
-      <nav>
+  <section class="hero is-fullheight">
+    <div class="hero-head">
+      <header class="navbar">
+        <div class="container is-centered">
+          <div id="navbarMenuHeroC" class="navbar-menu">         
+       
+            <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home" class="navbar-end">
+              <img src="images\cdc.jpg">
+            </a>
+            <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNRePmsDlMU3zdtrDzOdTnHfcmCvo-avDtdOmBZiumlkSaM__iXVS4aAsHvEALw_wcB"
+              class="navbar-start">
+              <img src="images\logo-who.jpg">
+            </a>
+          </div>
+        </div>
+    </div>
+    </header>
+    </div>
+   
+    <!-- Hero head: will stick at the top -->
 
-        <ul>
+    <!-- ++++++++++++++++++++++++++++++++++ -->
 
-          <li><a href="https://www.cdc.gov/coronavirus/2019-ncov/index.html">CDC</a></li>
+    <!-- Hero content: will be in the middle -->
+    <div class="block">
+      <div class="hero-body">
+        <div class="container has-text-centered">
+          <p class="title ">
+            Covid Co-Pilot
+          </p>  
+          <div class="placeholder"></div>
+          <img class="is-centered" src="images\covid.jpg">
+          <p class="subtitle">
+            Because <strong>Safety</strong> is truly in <strong>Numbers</strong>.
+          </p>
+          <p><strong><em>Enter your Zipcode to get started</em></strong></p>
+          <input class="is-focused" type="number" maxlength="5" size="20" pattern="[0-9]*" placeholder="Zipcode :">
+          <br>
+          <br>
+          <div class="control">
+            <button class="button is-black has-text-white">Submit</button>
+          </div>
+          <p>Your Health. Your Loved Ones. Your Data.</p>
+          <p>Right at your fingertips</p>
 
-          <li><a href="https://covid19.who.int/">WHO</a></li>
 
-        <h1><strong>Covid Co-Pilot</h1></strong><h4><small>Get all real time Local Covid Data at your finger-tips</small> </h4>
-
-        </ul>
-
-      </nav>
-
-    </header>  
-
-  
-
-
-
-    <br>
-
- 
-
-  <section id="hero"><h3>To get started enter your Zipcode Below</h3>
-
-      <div class="form-group">
-
-        <br>
-
-        <br>
-
-        <label for="usr">Zipcode:</label>
-
-        <input type="text" class="form-control" id="usr">
-
-        <br>
-
-        <br>
-
+        </div>
       </div>
-
- 
+      <div>
   </section>
-
- <main>
-
-<aside>
-  
-    <section class="row">
-      
-        <div class="card-column">
-
-          <figure class="card code-card">
-
-            <h4 class="card-header" id="icu">I.C.U. Bed Data </h4>
-
-            <div class="card-body">
-
-              <p>Total Nuber of ICU beds available and Total ICU beds in Current use <br></p>
-
-            </div>
-
-          </figure>
-
-        </div>
-
-        <div class="card-column">
-
-          <figure class="card code-card">
-
-            <h4 class="card-header" id="grads">Hospital Bed Data</h4>
-
-            <div class="card-body">
-
-             <p>Overveiw of Local Hospitalizations and Bed Avaibility</p>
-
-            </div>
-
-          </figure>
-
-        </div>
-  
-        <div class="card-column">
-
-          <figure class="card code-card">
-
-            <h4 class="card-header" id="instructors">Vaccine Info</h4>
-
-            <div class="card-body">
-
-              <p>
-
-                Lorem ipsum dolor sit amet, consectetur adipisicing elit. Voluptates explicabo maiores nesciunt hic aspernatur distinctio ut, nemo atque tenetur impedit ipsa! Cumque labore possimus animi voluptates praesentium at expedita explicabo.
-
+  </div>
+  <!-- Hero content: will be in the middle -->
+ <div class="block">
+      <div class="content">
+        <div class="column">
+          <div class="card">
+            <header class="card-header">
+              <p class="card-header-title">
+                National data
               </p>
-
+            </header>
+            <div class="card-content">
+              <div class="content">
+                <nav class="level is-mobile">
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading">Total Cases</p>
+                      <p class="title">39,831,318</p>
+                    </div>
+                  </div>
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading">Total New Cases</p>
+                      <p class="title">157,997</p>
+                    </div>
+                  </div>
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading">Fully Vaccinated</p>
+                      <p class="title">175,968,266</p>
+                    </div>
+                  </div>
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading">Single Dose Vaccinated</p>
+                      <p class="title">206,908,710</p>
+                    </div>
+                  </div>
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading">Non-Vaccinated</p>
+                      <p class="title">165,123,123</p>
+                    </div>
+                  </div>
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading">Hospitalizations</p>
+                      <p class="title">2,784,765</p>
+                    </div>
+                  </div>
+                  <div class="level-item has-text-centered">
+                    <div>
+                      <p class="heading">New Hospitalizations</p>
+                      <p class="title">12,193</p>
+                    </div>
+                  </div>
+              </div>
+              </nav>
+              <time datetime=""></time>
             </div>
-
-          </figure>
-
+          </div>
+          <footer class="card-footer">
+          </footer>
         </div>
-
-        <div class="card-column">
-
-          <figure class="card code-card">
-
-            <h4 class="card-header" id="other">Cases</h4>
-
-            <div class="card-body">
-
-              <p>
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci animi quisquam deserunt molestias minima quo aut obcaecati repellendus libero impedit sapiente fugiat itaque tempora, officiis quasi delectus voluptatibus a illo?
-              </p>
-
-            </div>
-
-          </figure>
-
-        </div>
-
-  </section>
-
-</aside>
-
-<div class="card-column">
-
-  <figure class="card code-card">
-
-    <h4 class="card-header" id="other">Cases</h4>
-
-    <div class="card-body">
-
-      <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Adipisci animi quisquam deserunt molestias minima quo aut obcaecati repellendus libero impedit sapiente fugiat itaque tempora, officiis quasi delectus voluptatibus a illo?
-      </p>
-
+      </div>
+    </div>
+    </div>
     </div>
 
- </main>
-<!-- <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/css/foundation.min.css" integrity="sha256-ogmFxjqiTMnZhxCqVmcqTvjfe1Y/ec4WaRj/aQPvn+I=" crossorigin="anonymous">
- 
-Compressed JavaScript
-<script src="https://cdn.jsdelivr.net/npm/foundation-sites@6.6.3/dist/js/foundation.min.js" integrity="sha256-pRF3zifJRA9jXGv++b06qwtSqX1byFQOLjqa2PTEb2o=" crossorigin="anonymous"></script> -->
-<script src="script.js"></script>
-    <footer><strong>Created in MSU Coding Bootcamp by Adam, Andrew, Johannes, and Max</footer>
-    
+  <div class="block">
+    <div class="columns is-vcentered">
+      <div class="column is-6">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              Total I.C.U Beds
+            </p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+              <br>
+              <time datetime=""></time>
+            </div>
+          </div>
+          <footer class="card-footer">
+          </footer>
+        </div>
+      </div>
+      <div class="column is-6">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">
+              Vaccine Totals
+            </p>
+            <button class="card-header-icon" aria-label="more options">
+              <span class="icon">
+                <i class="fas fa-angle-down" aria-hidden="true"></i>
+              </span>
+            </button>
+          </header>
+          <div class="card-content">
+            <div class="content">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
+              <br>
+              <time datetime=""></time>
+            </div>
+          </div>
+          <footer class="card-footer">
+          </footer>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src=""></script>
 </body>
+
+<div class="block"></div>
+<footer class="footer">
+  <div class="content has-text-centered">
+    <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home" class="navbar-center">Centers for Disease Control and Prevention</a>
+      |
+    <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNRePmsDlMU3zdtrDzOdTnHfcmCvo-avDtdOmBZiumlkSaM__iXVS4aAsHvEALw_wcB"
+      class="navbar-center">World Health Organization</a>
+    <p>
+      <br>
+      <br>
+      <strong>Covid Co-Pilot</strong> by <a href="https://github.com/maxaeon">Max</a> , <a
+        href="https://github.com/AdamHale88">Adam</a> , <a href="https://github.com/veggiepilot">Johannes</a> , <a
+        href="https://github.com/maxaeon">Andrew</a><br>The source code is licensed
+      <a href="http://opensource.org/licenses/mit-license.php">MIT</a> The website content
+      is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+    </p>
+  </div>
+</footer>
+
 </html>
