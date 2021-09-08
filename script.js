@@ -10,6 +10,10 @@ var singleCountyData = '/county/{fips}.json';
 var inputText        = document.getElementById('input-text');
 var submitBtn        = document.getElementById('submit');
 var cases            = document.getElementById('cases');
+var icuData          = document.getElementById('icu-data');
+var hospitalBedData  = document.getElementById('hospital-bed-data');
+var vaccineData      = document.getElementById('vaccine-data');
+var nationCasesData  = document.getElementById('nation-cases');
 
 var usStates = [
     { name: 'ALABAMA', abbreviation: 'AL'},
@@ -84,7 +88,9 @@ submitBtn.addEventListener('click', function() {
                 getStateData(stateAbbr);
             }
         }
-    } 
+    } else {
+        console.log('no location entered');
+    }
     
 });
 
@@ -94,15 +100,50 @@ function getStateData(state) {
             return response.json();
         })
         .then(function(data) {
-            var pTag = document.createElement('p');
-            pTag.innerText = data.actuals.cases.toLocaleString('en-US');
-            cases.appendChild(pTag);
-
-            console.log(data.actuals.cases.toLocaleString('en-US'));
-
-            ;
+            getStateCases(data);
+            getStateHospitalizations(data);
+            getStateVaccinesCompleted(data);
+            getStateVaccinesInitiated(data);
+            getStateVaccinesDistributed(data);
+            getStateVaccinesAdministered(data);
+            return data;
         })
 
+}
+
+function getStateCases(state) {
+    var pTag = document.createElement('p');
+    pTag.innerText = 'You have had ' + state.actuals.cases.toLocaleString('en-US') + ' cases in your area.';
+    cases.appendChild(pTag);
+}
+
+function getStateHospitalizations(state) {
+    console.log(state.actuals.icuBeds.capacity.toLocaleString('en-US'));
+}
+
+function getStateVaccinesCompleted(state) {
+    var pTag = document.createElement('p');
+    pTag.innerText = 'Vaccinations completed ' + state.actuals.vaccinationsCompleted.toLocaleString('en-US');
+    vaccineData.appendChild(pTag);
+}
+
+function getStateVaccinesInitiated(state) {
+    var pTag = document.createElement('p');
+    pTag.innerText = 'Vaccinations initiated ' + state.actuals.vaccinationsInitiated.toLocaleString('en-US');
+    vaccineData.appendChild(pTag);
+}
+
+function getStateVaccinesDistributed(state) {
+    var pTag = document.createElement('p');
+    pTag.innerText = 'Vaccinations distributed ' + state.actuals.vaccinesDistributed.toLocaleString('en-US');
+    vaccineData.appendChild(pTag);
+}
+
+function getStateVaccinesAdministered(state) {
+    var pTag = document.createElement('p');
+    pTag.innerText = 'Vaccinations administered ' + state.actuals.vaccinesAdministered.toLocaleString('en-US');
+    vaccineData.appendChild(pTag);
+    console.log(state.annotations.vaccinesAdministered.sources[0].name);
 }
 
 // Array of data we want to output
@@ -124,4 +165,6 @@ function getStateData(state) {
         // vaccinesAdministered
 
     // deaths
+
+// Identify user location using IP to suggest location data
 
