@@ -1,19 +1,31 @@
 
 // https://api.covidactnow.org/v2/states.json?apiKey=YOUR_KEY_HERE
 
-var baseURL          = 'https://api.covidactnow.org/v2';
-var apiKey           = '?apiKey=15bb291f94e449c7973d0131c7989297';
-var statesData       = '/states.json';
-var singleStateData  = '/state/{state}.json';
-var countiesData     = '/counties.json';
-var singleCountyData = '/county/{fips}.json';
-var inputText        = document.getElementById('input-text');
-var submitBtn        = document.getElementById('submit');
-var cases            = document.getElementById('cases');
-var icuData          = document.getElementById('icu-data');
-var hospitalBedData  = document.getElementById('hospital-bed-data');
-var vaccineData      = document.getElementById('vaccine-data');
-var nationCasesData  = document.getElementById('nation-cases');
+var baseURL                 = 'https://api.covidactnow.org/v2';
+var apiKey                  = '?apiKey=15bb291f94e449c7973d0131c7989297';
+var nationalData            = '/country/US.json';
+var statesData              = '/states.json';
+// baseURL + '/state/' + state + '.timeseries.json' + apiKey
+var countiesData            = '/counties.json';
+var singleCountyData        = '/county/{fips}.json';
+var inputText               = document.getElementById('input-text');
+var submitBtn               = document.getElementById('submit');
+var cases                   = document.getElementById('cases');
+var deaths                  = document.getElementById('state-deaths');
+var deathsHeader            = document.getElementById('deaths-header');
+var hospitalizations        = document.getElementById('state-hospitalizations');
+var hospitalizationHeader   = document.getElementById('hospitalization-header');
+var icuData                 = document.getElementById('icu-data');
+var icuHeader               = document.getElementById('icu-header');
+var hospitalBedData         = document.getElementById('hospital-bed-data');
+var vaccineData             = document.getElementById('vaccine-data');
+var vaccineHeader           = document.getElementById('vaccine-header');
+var totalNationalCases      = document.getElementById('national-total-cases');
+var totalNationalNewCases   = document.getElementById('national-new-cases');
+var nationalFullyVaccinated = document.getElementById('fully-vaccinated');
+var nationalSingleDose      = document.getElementById('single-dose');
+var nationalHospitalization = document.getElementById('hospitalizations');
+var nationalDeaths          = document.getElementById('deaths');
 
 var usStates = [
     { name: 'ALABAMA', abbreviation: 'AL'},
@@ -94,77 +106,62 @@ submitBtn.addEventListener('click', function() {
     
 });
 
-function getStateData(state) {
-    fetch(baseURL + '/state/' + state + '.json' + apiKey)
+function getNationalData() {
+    fetch(baseURL + nationalData + apiKey)
         .then(function(response) {
             return response.json();
         })
         .then(function(data) {
-            getStateCases(data);
-            getStateHospitalizations(data);
-            getStateVaccinesCompleted(data);
-            getStateVaccinesInitiated(data);
-            getStateVaccinesDistributed(data);
-            getStateVaccinesAdministered(data);
+            renderNationalData(data);
             return data;
         })
-
 }
 
-function getStateCases(state) {
-    var pTag = document.createElement('p');
-    pTag.innerText = 'You have had ' + state.actuals.cases.toLocaleString('en-US') + ' cases in your area.';
-    cases.appendChild(pTag);
+function renderNationalData(data) {
+    totalNationalCases.innerText      = data.actuals.cases.toLocaleString('en-US');
+    totalNationalNewCases.innerText   = data.actuals.newCases.toLocaleString('en-US');
+    nationalFullyVaccinated.innerText = data.actuals.vaccinationsCompleted.toLocaleString('en-US');
+    nationalSingleDose.innerText      = data.actuals.vaccinationsInitiated.toLocaleString('en-US');
+    nationalHospitalization.innerText = data.actuals.hospitalBeds.currentUsageTotal.toLocaleString('en-US');
+    nationalDeaths.innerText          = data.actuals.deaths.toLocaleString('en-US');
 }
 
-function getStateHospitalizations(state) {
-    console.log(state.actuals.icuBeds.capacity.toLocaleString('en-US'));
+function getStateData(state) {
+    fetch(baseURL + '/state/' + state + '.timeseries.json' + apiKey)
+        .then(function(response) {
+            return response.json();
+        })
+        .then(function(data) {
+            renderStateData(data);
+            console.log(data);
+            return data;
+        })
 }
 
-function getStateVaccinesCompleted(state) {
-    var pTag = document.createElement('p');
-    pTag.innerText = 'Vaccinations completed ' + state.actuals.vaccinationsCompleted.toLocaleString('en-US');
-    vaccineData.appendChild(pTag);
+function renderStateData(data) {
+    icuHeader.innerText = statePicker(data);
+    vaccineHeader.innerText = statePicker(data);
+    hospitalizationHeader.innerText = statePicker(data);
+    deathsHeader.innerText = statePicker(data);
+
+    icuData.innerText = 'There are ' + (data.actuals.icuBeds.capacity - data.actuals.icuBeds.currentUsageTotal).toLocaleString('en-US') + ' ICU beds available.';
+    vaccineData.innerText = 'Vaccinations administered ' + data.actuals.vaccinesAdministered.toLocaleString('en-US');
+    deaths.innerText = data.actuals.deaths.toLocaleString('en-US');
+    hospitalizations.innerText = Math.round((data.actuals.hospitalBeds.currentUsageCovid / data.actuals.hospitalBeds.capacity) * 100)+'% of hositalizations are covid cases';
+
+    // 'Vaccinations initiated ' + state.actuals.vaccinationsInitiated.toLocaleString('en-US');
+    // 'Vaccinations distributed ' + state.actuals.vaccinesDistributed.toLocaleString('en-US');
+    // 'Vaccinations completed ' + data.actuals.vaccinationsCompleted.toLocaleString('en-US');
 }
 
-function getStateVaccinesInitiated(state) {
-    var pTag = document.createElement('p');
-    pTag.innerText = 'Vaccinations initiated ' + state.actuals.vaccinationsInitiated.toLocaleString('en-US');
-    vaccineData.appendChild(pTag);
+function statePicker(stateObject) {
+    var array     = stateObject.url.split("/");
+    var stateCode = array[array.length - 1];
+    var state     = stateCode.split("-")[1].toUpperCase();
+    return state;
 }
 
-function getStateVaccinesDistributed(state) {
-    var pTag = document.createElement('p');
-    pTag.innerText = 'Vaccinations distributed ' + state.actuals.vaccinesDistributed.toLocaleString('en-US');
-    vaccineData.appendChild(pTag);
-}
-
-function getStateVaccinesAdministered(state) {
-    var pTag = document.createElement('p');
-    pTag.innerText = 'Vaccinations administered ' + state.actuals.vaccinesAdministered.toLocaleString('en-US');
-    vaccineData.appendChild(pTag);
-    console.log(state.annotations.vaccinesAdministered.sources[0].name);
-}
-
-// Array of data we want to output
-    // cases
-
-    // hospitalizations
-        // hospitalBeds capacity
-        // currentUsageTotal
-        // currentUsageCovid
-
-        //icuBeds
-            // capacity
-            // currentUsageTotal
-            // currentUsageCovid
-
-    // vaccinations
-        // vaccinationsInitiated
-        // vaccinationsCompleted
-        // vaccinesAdministered
-
-    // deaths
+getNationalData();
 
 // Identify user location using IP to suggest location data
 
