@@ -26,6 +26,12 @@ var nationalFullyVaccinated = document.getElementById('fully-vaccinated');
 var nationalSingleDose      = document.getElementById('single-dose');
 var nationalHospitalization = document.getElementById('hospitalizations');
 var nationalDeaths          = document.getElementById('deaths');
+var dropdown                = document.getElementById('dropdown');
+var dropdownMenu            = document.getElementById('dropdown-menu');
+var dataCards               = document.getElementById('data-cards');
+var selectBtn               = document.getElementById('select-button');
+var selectText              = document.getElementById('select-text');
+var dropdownContent         = document.getElementsByClassName('dropdown-content');
 
 var usStates = [
     { name: 'ALABAMA', abbreviation: 'AL'},
@@ -89,22 +95,30 @@ var usStates = [
     { name: 'WYOMING', abbreviation: 'WY' }
 ]
 
-submitBtn.addEventListener('click', function() {
-    if (inputText.value) {
-        var locationInput = inputText.value.toUpperCase().trim();
-        // check if locationInput is in usStates array
-        for (var i = 0; i < usStates.length; i++) {
-            if (locationInput === usStates[i].name) {
-                // get state abbreviation
-                var stateAbbr = usStates[i].abbreviation;
-                getStateData(stateAbbr);
-            }
+selectBtn.addEventListener('click', function(e) {
+    // Showing the state selections once the 'Select State' button is clicked
+    dropdownMenu.classList.add('is-active');
+    // Toggling back to show the states when the button is clicked again
+    dropdown.classList.remove('is-hidden');
+})
+
+dropdown.addEventListener('click', function(e) {
+    var selectedState = e.target.innerHTML;
+    var locationInput = selectedState.toUpperCase().trim();
+    for (var i = 0; i < usStates.length; i++) {
+        if (locationInput === usStates[i].name) {
+            // Change the text on the select button
+            selectText.innerText = e.target.innerHTML;
+            // Hide the dropdown once a state has been selected
+            dropdown.classList.add('is-hidden');
+            // get state abbreviation
+            var stateAbbr = usStates[i].abbreviation;
+            // Showing the data cards to the web page
+            dataCards.classList.remove('is-hidden');    
+            getStateData(stateAbbr, selectedState);
         }
-    } else {
-        console.log('no location entered');
     }
-    
-});
+})
 
 function getNationalData() {
     fetch(baseURL + nationalData + apiKey)
@@ -126,23 +140,22 @@ function renderNationalData(data) {
     nationalDeaths.innerText          = data.actuals.deaths.toLocaleString('en-US');
 }
 
-function getStateData(state) {
+function getStateData(state, stateName) {
     fetch(baseURL + '/state/' + state + '.timeseries.json' + apiKey)
         .then(function(response) {
             return response.json();
         })
         .then(function(data) {
-            renderStateData(data);
-            console.log(data);
+            renderStateData(data, stateName);
             return data;
         })
 }
 
-function renderStateData(data) {
-    icuHeader.innerText = statePicker(data);
-    vaccineHeader.innerText = statePicker(data);
-    hospitalizationHeader.innerText = statePicker(data);
-    deathsHeader.innerText = statePicker(data);
+function renderStateData(data, stateName) {
+    icuHeader.innerText             = stateName;
+    vaccineHeader.innerText         = stateName;
+    hospitalizationHeader.innerText = stateName;
+    deathsHeader.innerText          = stateName;
 
     icuData.innerText = 'There are ' + (data.actuals.icuBeds.capacity - data.actuals.icuBeds.currentUsageTotal).toLocaleString('en-US') + ' ICU beds available.';
     vaccineData.innerText = 'Vaccinations administered ' + data.actuals.vaccinesAdministered.toLocaleString('en-US');
@@ -152,13 +165,6 @@ function renderStateData(data) {
     // 'Vaccinations initiated ' + state.actuals.vaccinationsInitiated.toLocaleString('en-US');
     // 'Vaccinations distributed ' + state.actuals.vaccinesDistributed.toLocaleString('en-US');
     // 'Vaccinations completed ' + data.actuals.vaccinationsCompleted.toLocaleString('en-US');
-}
-
-function statePicker(stateObject) {
-    var array     = stateObject.url.split("/");
-    var stateCode = array[array.length - 1];
-    var state     = stateCode.split("-")[1].toUpperCase();
-    return state;
 }
 
 // var myChart = document.getElementById('myChart').getContext('2d');
@@ -175,6 +181,4 @@ function statePicker(stateObject) {
 // })
 
 getNationalData();
-
-// Identify user location using IP to suggest location data
 
