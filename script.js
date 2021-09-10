@@ -161,6 +161,19 @@ function statePicker(stateObject) {
     return state;
 }
 
+// var myChart = document.getElementById('myChart').getContext('2d');
+
+// var chart = new Chart(mychart, {
+//     type: 'line',
+//     data: {
+//         labels: [],
+//         datasets: []
+//     },
+//     options: {
+
+//     }
+// })
+
 getNationalData();
 
 // Identify user location using IP to suggest location data

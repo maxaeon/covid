@@ -1,433 +1,235 @@
 <!DOCTYPE html>
-
 <html>
-
-<head><!-- -------------------------Meta-Data -------------------------->
-  
+<head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
-
-  <title>Covid-Co-pilot</title>
-
+  <title>Covid Co-Pilot</title>
   <script src="https://kit.fontawesome.com/b89d79f88d.js" crossorigin="anonymous"></script>
-
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-
   <link rel="stylesheet" src="style.css">
-
-</head><!-- -------------------------Meta-Data ------------------------ --> -->
+</head> 
 
 <body>
-
-
-    <div class="hero-head"><!-- -------------------Covid Art Center Piece & Navbar Start -->
-
-      <header class="navbar">
-
-        <div class="container is-centered">
-
-          <div id="navbarMenuHeroC" class="navbar-menu">
-
-            <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home" class="navbar-end">  
-
-              <img src="images\cdc.jpg">  
-
-            </a>
-
-            <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNRePmsDlMU3zdtrDzOdTnHfcmCvo-avDtdOmBZiumlkSaM__iXVS4aAsHvEALw_wcB"
-              class="navbar-start">   
-
-              <img src="images\logo-who.jpg"> 
-              
-            </a>
-
-          </div>
-
+  <!--Covid Art Center Piece & Navbar Start-->
+  <div class="hero-head">
+    <header class="navbar">
+      <div class="container is-centered">
+        <div id="navbarMenuHeroC" class="navbar-menu">
+          <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home" class="navbar-end"><img src="images\cdc.jpg"></a>
+          <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNRePmsDlMU3zdtrDzOdTnHfcmCvo-avDtdOmBZiumlkSaM__iXVS4aAsHvEALw_wcB"
+            class="navbar-start"><img src="images\logo-who.jpg"></a>
         </div>
-
-      </header>
-
-    </div><!------------------------------------- Covid Art Center Piece & NavBar End -->
-
-
-
-  <div class="hero-body"><!------------------------------ Covid Art Center Piece - Lower Text & Input Field Start -->
-
-    <div class="container has-text-centered">
-
-      <p class="title ">  Covid Co-Pilot  </p>
-
-        <img class="is-centered" src="images\covid.jpg">
-
-      <p class="subtitle">
-
-        Because <strong>Safety</strong> is truly in <strong>Numbers</strong>.
-
-      </p>
-
-      <p>
-
-        <strong>
-
-          <em>Enter your Zipcode to get started</em>
-
-        </strong>
-
-      </p>
-
-        <input class="is-focused" type="number" maxlength="5" size="20" pattern="[0-9]*" placeholder="Zipcode :">
-
-          <br>
-
-          <br>
-
-        <div class="control">
-
-            <button class="button is-black has-text-white">Submit</button>
-
-        </div>
-
-          <p>Your Health. Your Loved Ones. Your Data.</p>
-
-          <p>Right at your fingertips</p>
-
-    </div>
-
-  </div><!-- ------------------------------- Covid Art Center Piece - Lower Text & Input Field End -->
-
-
-  <div class="column  is-vcentered"><!-- ----------------------------------- National Covid Data Level Start -->
-
-    <div class="card">
-
-      <header class="card-header">
-
-        <p class="card-header-title">
-
-          National data
-
-        </p>
-
-      </header>
-
-      <div class="card-content">
-
-        <div class="content">
-
-            <nav class="level is-mobile">
-
-              <div class="level-item has-text-centered">
-
-                <div>
-
-                   <p class="heading">Total Cases</p>
-
-                   <p class="title">39,831,318</p>
-
-                </div>
-
-              </div>
-
-              <div class="level-item has-text-centered">
-
-                <div>
-
-                    <p class="heading">Total New Cases</p>
-
-                    <p class="title">157,997</p>
-
-                </div>
-
-              </div>
-
-              <div class="level-item has-text-centered">
-
-                <div>
-
-                    <p class="heading">Fully Vaccinated</p>
-
-                    <p class="title">175,968,266</p>
-
-                </div>
-
-              </div>
-
-              <div class="level-item has-text-centered">
-                
-                <div>
-
-                    <p class="heading">Single Dose Vaccinated</p>
-
-                    <p class="title">206,908,710</p>
-
-                </div>
-
-              </div>
-
-              <div class="level-item has-text-centered">
-
-                <div>
-
-                    <p class="heading">Non-Vaccinated</p>
-
-                    <p class="title">165,123,123</p>
-
-                </div>
-
-              </div>
-
-              <div class="level-item has-text-centered">
-                
-                <div>
-
-                    <p class="heading">Hospitalizations</p>
-
-                    <p class="title">2,784,765</p>
-
-                </div>
-
-              </div>
-
-              <div class="level-item has-text-centered">
-
-                <div>
-
-                    <p class="heading">New Hospitalizations</p>
-
-                    <p class="title">12,193</p>
-
-                </div>
-
-              </div>
-              
-            </nav>
-
-                <time datetime=""></time>
-
-        </div>
-
       </div>
-
-        <footer class="card-footer">
-
-        </footer>
-
-      </div>
-
-    </div>
-
-  </div><!------------------------- --------------------------------------- National Covid Data Level End -->
-
-
-
-  <div class="column is-6"><!-- -------------------------Data Card - Start-------------------------->
-
-      <div class="card">
-
-        <header class="card-header">
-
-            <p class="card-header-title">
-
-                Local Total I.C.U Beds
-
-            </p>
-
-            <button class="card-header-icon" aria-label="more options">
-
-              <span class="icon">
-                
-                  <i class="fas fa-angle-down" aria-hidden="true">
-
-                  </i>
-
-              </span>
-
-            </button>
-
-        </header>
-
-          <div class="card-content">
-
-            <div class="content">
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-
-                <br>
-
-                <time datetime="">
-
-                </time>
-
-            </div>
-
-          </div>
-
-              <footer class="card-footer">
-
-              </footer>
-
-      </div>
-
-  </div><!-- -------------------------Data Card - End-------------------------->
-
-
-
-
-  <div class="column is-6"><!-- -------------------------Data Card - Start-------------------------->
-
-      <div class="card">
-
-        <header class="card-header">
-
-              <p class="card-header-title">
-
-                Local Vaccine Totals
-
-              </p>
-
-              <button class="card-header-icon" aria-label="more options">
-
-                <span class="icon">
-
-                  <i class="fas fa-angle-down" aria-hidden="true">
-
-                  </i>
-
-                </span>
-
-              </button>
-
-        </header>
-
-        <div class="card-content">
-
-          <div class="content">
-
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-
-                <br>
-
-                <time datetime="">
-
-                </time>
-                
-          </div>
-
-        </div>
-
-            <footer class="card-footer">
-
-            </footer>
-
-      </div>
-
-    </div><!-- -------------------------Data Card - End-------------------------->
-      
-
-
-
-  <div class="column is-6"><!-- -------------------------Data Card - Start-------------------------->
-
-      <div class="card">
-
-        <header class="card-header">
-
-          <p class="card-header-title">
-
-           Local Hospitalization Totals
-
-          </p>
-
-          <button class="card-header-icon" aria-label="more options">
-
-            <span class="icon">
-
-              <i class="fas fa-angle-down" aria-hidden="true"></i>
-
-            </span>
-
-          </button>
-
-        </header>
-
-        <div class="card-content">
-
-          <div class="content">
-
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-
-            <br>
-
-            <time datetime="">
-
-            </time>
-
-          </div>
-
-        </div>
-
-          <footer class="card-footer">
-
-          </footer>
-
-      </div>
-
-  </div>
-
-</div><!-- -------------------------Data Card - End-------------------------->
-
-<div class="column is-6"><!-- -------------------------Data Card - Start-------------------------->
-
-  <div class="card">
-
-    <header class="card-header">
-
-      <p class="card-header-title">
-
-        Local Death Totals
-
-      </p>
-
-      <button class="card-header-icon" aria-label="more options">
-
-        <span class="icon">
-
-          <i class="fas fa-angle-down" aria-hidden="true"></i>
-
-        </span>
-
-      </button>
-
     </header>
+  </div>
+  <!--Covid Art Center Piece & NavBar End-->
+
+  <!--Covid Art Center Piece - Lower Text & Input Field Start-->
+  <div class="hero-body">
+    <div class="container has-text-centered">
+      <p class="title">Covid Co-Pilot</p>
+      <img class="is-centered" src="images\covid.jpg">
+      <p class="subtitle">Because <strong>Safety</strong> is truly in <strong>Numbers</strong>.</p>
+
+      <div class="dropdown">
+        <div class="dropdown-trigger">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu">
+            <span>Select your State</span>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="false"></i>
+            </span>
+          </button>
+        </div>
 
 
-    <div class="card-content">
-
-      <div class="content">
-
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus nec iaculis mauris.
-
-        <br>
-
-        <time datetime="">
-
-        </time>
-
+        <div class="dropdown-menu" id="dropdown-menu" role="menu">
+          <div class="dropdown-content">
+            <a class="dropdown-item">Alabama</a>
+            <a class="dropdown-item">Alaska</a>
+            <a class="dropdown-item">Arizona</a>
+            <a class="dropdown-item">Arkansas</a>
+            <a class="dropdown-item">California</a>
+            <a class="dropdown-item">Colorado</a>
+            <a class="dropdown-item">Connecticut</a>
+            <a class="dropdown-item">Delaware</a>
+            <a class="dropdown-item">Florida</a>
+            <a class="dropdown-item">Georgia</a>
+            <a class="dropdown-item">Hawaii</a>
+            <a class="dropdown-item">Idaho</a>
+            <a class="dropdown-item">Illinois</a>
+            <a class="dropdown-item">Indiana</a>
+            <a class="dropdown-item">Iowa</a>
+            <a class="dropdown-item">Kansas</a>
+            <a class="dropdown-item">Kentucky</a>
+            <a class="dropdown-item">Louisiana</a>
+            <a class="dropdown-item">Maine</a>
+            <a class="dropdown-item">Maryland</a>
+            <a class="dropdown-item">Massachusetts </a>
+            <a class="dropdown-item">Michigan</a>
+            <a class="dropdown-item">Minnesota</a>
+            <a class="dropdown-item">Mississippi</a>
+            <a class="dropdown-item">Missouri</a>
+            <a class="dropdown-item">Montana</a>
+            <a class="dropdown-item">Nebraska</a>
+            <a class="dropdown-item">Nevada</a>
+            <a class="dropdown-item">New Hampshire</a>
+            <a class="dropdown-item">New Jersey</a>
+            <a class="dropdown-item">New Mexico</a>
+            <a class="dropdown-item">New York</a>
+            <a class="dropdown-item">North Carolina</a>
+            <a class="dropdown-item">North Dakota</a>
+            <a class="dropdown-item">Ohio</a>
+            <a class="dropdown-item">Oklahoma</a>
+            <a class="dropdown-item">Oregon</a>
+            <a class="dropdown-item">Pennsylvania</a>
+            <a class="dropdown-item">Rhode Island</a>
+            <a class="dropdown-item">South Carolina</a>
+            <a class="dropdown-item">South Dakota</a>
+            <a class="dropdown-item">Tennessee</a>
+            <a class="dropdown-item">Texas</a>
+            <a class="dropdown-item">Utah</a>
+            <a class="dropdown-item">Vermont</a>
+            <a class="dropdown-item">Virginia</a>
+            <a class="dropdown-item">Washington</a>
+            <a class="dropdown-item">West Virginia</a>
+            <a class="dropdown-item">Wisconsin</a>
+            <a class="dropdown-item">Wyoming</a>
+          </div>
+        </div>
       </div>
+          <br>
+          <br>
+
+      <div class="control">
+          <button class="button is-black has-text-white" id="submit">Submit</button>
+      </div>
+
+      <p>Your Health. Your Loved Ones. Your Data.</p>
+      <p>At your fingertips.</p>
 
     </div>
 
- 
-    
-          <footer class="card-footer">
-          </footer>
+  </div>
+  <!--Covid Art Center Piece - Lower Text & Input Field End-->
+
+  <!--National Covid Data Level Start-->
+  <div class="column  is-vcentered">
+    <div class="card">
+      <header class="card-header">
+        <p class="card-header-title">U.S. National Data</p>
+      </header>
+      <div class="card-content">
+        <div class="content">
+            <nav class="level is-mobile">
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Total Cases</p>
+                  <p class="title" id="national-total-cases"></p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Total New Cases</p>
+                  <p class="title" id="national-new-cases"></p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Fully Vaccinated</p>
+                  <p class="title" id="fully-vaccinated"></p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">           
+                <div>
+                  <p class="heading">Single Dose Vaccinated</p>
+                  <p class="title" id="single-dose"></p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">                
+                <div>
+                  <p class="heading">Hospitalizations</p>
+                  <p class="title" id="hospitalizations"></p>
+                </div>
+              </div>
+              <div class="level-item has-text-centered">
+                <div>
+                  <p class="heading">Deaths</p>
+                  <p class="title" id="deaths"></p>
+                </div>
+              </div>              
+            </nav>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--National Covid Data Level End-->
+
+  <div class="columns is-multiline is-hidden">
+
+    <!--ICU Data-->
+    <div class="column is-6">
+      <div class="card">
+        <header class="card-header">
+            <p class="card-header-title"><span id="icu-header"></span>&nbsp;I.C.U Beds Available</p>
+        </header>
+        <div class="card-content">
+          <div class="content" id="icu-data">
+              <br>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!--Vaccine Totals-->
+    <div class="column is-6">
+      <div class="card">
+        <header class="card-header">
+              <p class="card-header-title"><span id="vaccine-header"></span>&nbsp; Vaccine Totals</p>
+        </header>
+        <div class="card-content">
+          <div class="content" id="vaccine-data">
+                <br>      
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Vaccine Data End-->
+
+    <!--Hospitalization Totals-->
+    <div class="column is-6">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title"><span id="hospitalization-header"></span>&nbsp;Hospitalization Totals</p>
+        </header>
+        <div class="card-content">
+          <div class="content" id="state-hospitalizations">
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Hospitalization Totals End-->
+
+    <!--Death Totals-->
+    <div class="column is-6">
+      <div class="card">
+        <header class="card-header">
+          <p class="card-header-title" ><span id="deaths-header"></span>&nbsp;Death Totals</p>
+        </header>
+        <div class="card-content">
+          <div class="content" id="state-deaths">
+            <br>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!--Death Totals End-->
   </div>
 
-</div>
-
-</div>
 
 
-
+ <script src="script.js"></script>
+ 
 </body>
 
 <footer class="footer">
