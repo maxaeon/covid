@@ -27,8 +27,10 @@
 &nbsp;
 
 ## APIs:
-|Lorem|
-|-|
+https://apidocs.covidactnow.org/#register 
+
+https://rapidapi.com/pillious/api/who-covid-19-data/
+
 
 &nbsp;   
 
