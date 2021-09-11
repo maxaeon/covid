@@ -183,3 +183,158 @@ footer {
     max-width: 33.333%;
   }
 }
+<!--Covid Art Center Piece & Navbar Start-->
+<div class="tile is-flex-direction-row is-justify-content-space-evenly is-align-content-center">
+  <div class="tile is-flex-direction-column is-2 p-6 m-4 is-justify-content-left is-align-content-center">
+    <h3>Get your local Covid information.</h3>
+    <br>
+    <div class="dropdown" id="dropdown-menu">
+      <div class="dropdown-trigger">
+        <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" id="select-button">
+          <span id="select-text">Select your State</sis-danger is-lightpan>
+            <span class="icon is-small">
+              <i class="fas fa-angle-down" aria-hidden="false"></i>
+            </span>
+        </button>
+      </div>
+      <div class="dropdown-menu" role="menu">
+        <div class="dropdown-content" id="dropdown">
+          <a class="dropdown-item">Alabama</a>
+          <a class="dropdown-item">Alaska</a>
+          <a class="dropdown-item">Arizona</a>
+          <a class="dropdown-item">Arkansas</a>
+          <a class="dropdown-item">California</a>
+          <a class="dropdown-item">Colorado</a>
+          <a class="dropdown-item">Connecticut</a>
+          <a class="dropdown-item">Delaware</a>
+          <a class="dropdown-item">Florida</a>
+          <a class="dropdown-item">Georgia</a>
+          <a class="dropdown-item">Hawaii</a>
+          <a class="dropdown-item">Idaho</a>
+          <a class="dropdown-item">Illinois</a>
+          <a class="dropdown-item">Indiana</a>
+          <a class="dropdown-item">Iowa</a>
+          <a class="dropdown-item">Kansas</a>
+          <a class="dropdown-item">Kentucky</a>
+          <a class="dropdown-item">Louisiana</a>
+          <a class="dropdown-item">Maine</a>
+          <a class="dropdown-item">Maryland</a>
+          <a class="dropdown-item">Massachusetts </a>
+          <a class="dropdown-item">Michigan</a>
+          <a class="dropdown-item">Minnesota</a>
+          <a class="dropdown-item">Mississippi</a>
+          <a class="dropdown-item">Missouri</a>
+          <a class="dropdown-item">Montana</a>
+          <a class="dropdown-item">Nebraska</a>
+          <a class="dropdown-item">Nevada</a>
+          <a class="dropdown-item">New Hampshire</a>
+          <a class="dropdown-item">New Jersey</a>
+          <a class="dropdown-item">New Mexico</a>
+          <a class="dropdown-item">New York</a>
+          <a class="dropdown-item">North Carolina</a>
+          <a class="dropdown-item">North Dakota</a>
+          <a class="dropdown-item">Ohio</a>
+          <a class="dropdown-item">Oklahoma</a>
+          <a class="dropdown-item">Oregon</a>
+          <a class="dropdown-item">Pennsylvania</a>
+          <a class="dropdown-item">Rhode Island</a>
+          <a class="dropdown-item">South Carolina</a>
+          <a class="dropdown-item">South Dakota</a>
+          <a class="dropdown-item">Tennessee</a>
+          <a class="dropdown-item">Texas</a>
+          <a class="dropdown-item">Utah</a>
+          <a class="dropdown-item">Vermont</a>
+          <a class="dropdown-item">Virginia</a>
+          <a class="dropdown-item">Washington</a>
+          <a class="dropdown-item">West Virginia</a>
+          <a class="dropdown-item">Wisconsin</a>
+          <a class="dropdown-item">Wyoming</a>
+        </div>
+      </div>
+    </div>
+    <br>
+    <p class="subtitle">Because <strong>Safety</strong> is truly in <strong>Numbers</strong>.</p>
+  </div>
+  
+  <!--Covid Art Center Piece & NavBar End-->  <!--Covid Art Center Piece & Navbar Start-->
+  <div class="tile is-flex-direction-row is-justify-content-space-evenly is-align-content-center">
+    <div class="tile is-flex-direction-column is-2 p-6 m-4 is-justify-content-left is-align-content-center">
+
+      <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home" class="navbar-end"><img
+          src="images\cdc.jpg"></a>
+      <br>
+      <br>
+      <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNRePmsDlMU3zdtrDzOdTnHfcmCvo-avDtdOmBZiumlkSaM__iXVS4aAsHvEALw_wcB"
+        class="navbar-start"><img src="images\logo-who.jpg"></a>
+      <br>
+      <h3>Get your local Covid information.</h3>
+      <br>
+      <div class="dropdown" id="dropdown-menu">
+        <div class="dropdown-trigger">
+          <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" id="select-button">
+            <span id="select-text">Select your State</sis-danger is-lightpan>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="false"></i>
+              </span>
+          </button>
+        </div>
+        <div class="dropdown-menu" role="menu">
+          <div class="dropdown-content" id="dropdown">
+            <a class="dropdown-item">Alabama</a>
+            <a class="dropdown-item">Alaska</a>
+            <a class="dropdown-item">Arizona</a>
+            <a class="dropdown-item">Arkansas</a>
+            <a class="dropdown-item">California</a>
+            <a class="dropdown-item">Colorado</a>
+            <a class="dropdown-item">Connecticut</a>
+            <a class="dropdown-item">Delaware</a>
+            <a class="dropdown-item">Florida</a>
+            <a class="dropdown-item">Georgia</a>
+            <a class="dropdown-item">Hawaii</a>
+            <a class="dropdown-item">Idaho</a>
+            <a class="dropdown-item">Illinois</a>
+            <a class="dropdown-item">Indiana</a>
+            <a class="dropdown-item">Iowa</a>
+            <a class="dropdown-item">Kansas</a>
+            <a class="dropdown-item">Kentucky</a>
+            <a class="dropdown-item">Louisiana</a>
+            <a class="dropdown-item">Maine</a>
+            <a class="dropdown-item">Maryland</a>
+            <a class="dropdown-item">Massachusetts </a>
+            <a class="dropdown-item">Michigan</a>
+            <a class="dropdown-item">Minnesota</a>
+            <a class="dropdown-item">Mississippi</a>
+            <a class="dropdown-item">Missouri</a>
+            <a class="dropdown-item">Montana</a>
+            <a class="dropdown-item">Nebraska</a>
+            <a class="dropdown-item">Nevada</a>
+            <a class="dropdown-item">New Hampshire</a>
+            <a class="dropdown-item">New Jersey</a>
+            <a class="dropdown-item">New Mexico</a>
+            <a class="dropdown-item">New York</a>
+            <a class="dropdown-item">North Carolina</a>
+            <a class="dropdown-item">North Dakota</a>
+            <a class="dropdown-item">Ohio</a>
+            <a class="dropdown-item">Oklahoma</a>
+            <a class="dropdown-item">Oregon</a>
+            <a class="dropdown-item">Pennsylvania</a>
+            <a class="dropdown-item">Rhode Island</a>
+            <a class="dropdown-item">South Carolina</a>
+            <a class="dropdown-item">South Dakota</a>
+            <a class="dropdown-item">Tennessee</a>
+            <a class="dropdown-item">Texas</a>
+            <a class="dropdown-item">Utah</a>
+            <a class="dropdown-item">Vermont</a>
+            <a class="dropdown-item">Virginia</a>
+            <a class="dropdown-item">Washington</a>
+            <a class="dropdown-item">West Virginia</a>
+            <a class="dropdown-item">Wisconsin</a>
+            <a class="dropdown-item">Wyoming</a>
+          </div>
+        </div>
+      </div>
+      <br>
+      <p class="subtitle">Because <strong>Safety</strong> is truly in <strong>Numbers</strong>.</p>
+    </div>
+    
+    <!--Covid Art Center Piece & NavBar End-->z
