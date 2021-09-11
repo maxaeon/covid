@@ -95,31 +95,8 @@ var usStates = [
     { name: 'WYOMING', abbreviation: 'WY' }
 ]
 
-//second api stuff
-var axios = require("axios").default;
 
-var options = {
-  method: 'GET',
-  url: 'https://who-covid-19-data.p.rapidapi.com/api/data',
-  params: {cases: '35000', reportDate: '2020-03-25'},
-  headers: {
-    'x-rapidapi-host': 'who-covid-19-data.p.rapidapi.com',
-    'x-rapidapi-key': '35cf5f3ccdmsh5965c90d2675fb7p187549jsn64f2b95090d4'
-  }
-};
 
-axios.request(options).then(function (response) {
-	console.log(response.data);
-}).catch(function (error) {
-	console.error(error);
-});
-
-selectBtn.addEventListener('click', function(e) {
-    // Showing the state selections once the 'Select State' button is clicked
-    dropdownMenu.classList.add('is-active');
-    // Toggling back to show the states when the button is clicked again
-    dropdown.classList.remove('is-hidden');
-})
 
 dropdown.addEventListener('click', function(e) {
     var selectedState = e.target.innerHTML;
