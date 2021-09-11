@@ -95,8 +95,12 @@ var usStates = [
     { name: 'WYOMING', abbreviation: 'WY' }
 ]
 
-
-
+selectBtn.addEventListener('click', function(e) {
+    // Showing the state selections once the 'Select State' button is clicked
+    dropdownMenu.classList.add('is-active');
+    // Toggling back to show the states when the button is clicked again
+    dropdown.classList.remove('is-hidden');
+})
 
 dropdown.addEventListener('click', function(e) {
     var selectedState = e.target.innerHTML;
