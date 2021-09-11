@@ -1,42 +1,36 @@
 <!DOCTYPE html>
 <html>
+
 <head>
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Covid Co-Pilot</title>
   <script src="https://kit.fontawesome.com/b89d79f88d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
   <link rel="stylesheet" src="style.css">
-</head> 
+</head>
 
 <body>
   <!--Covid Art Center Piece & Navbar Start-->
-  <div class="hero-head">
-    <header class="navbar">
-      <div class="container is-centered">
-        <div id="navbarMenuHeroC" class="navbar-menu">
-          <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home" class="navbar-end"><img src="images\cdc.jpg"></a>
-          <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNRePmsDlMU3zdtrDzOdTnHfcmCvo-avDtdOmBZiumlkSaM__iXVS4aAsHvEALw_wcB"
-            class="navbar-start"><img src="images\logo-who.jpg"></a>
-        </div>
-      </div>
-    </header>
-  </div>
-  <!--Covid Art Center Piece & NavBar End-->
+  <div class="tile is-flex-direction-row is-justify-content-left is-align-content-center">
+    <div class="tile is-flex-direction-column is-2 p-6 m-4 is-justify-content-left is-align-content-center">
 
-  <!--Covid Art Center Piece - Lower Text & Input Field Start-->
-  <div class="hero-body">
-    <div class="container has-text-centered">
-      <p class="title">Covid Co-Pilot</p>
-      <img class="is-centered" src="images\covid.jpg">
+      <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home" class="navbar-end"><img
+          src="images\cdc.jpg"></a>
+      <br>
+      <br>
+      <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNRePmsDlMU3zdtrDzOdTnHfcmCvo-avDtdOmBZiumlkSaM__iXVS4aAsHvEALw_wcB"
+        class="navbar-start"><img src="images\logo-who.jpg"></a>
+      <br>
+      <br>
       <p class="subtitle">Because <strong>Safety</strong> is truly in <strong>Numbers</strong>.</p>
 
       <div class="dropdown" id="dropdown-menu">
         <div class="dropdown-trigger">
           <button class="button" aria-haspopup="true" aria-controls="dropdown-menu" id="select-button">
-            <span id="select-text">Select your State</span>
-            <span class="icon is-small">
-              <i class="fas fa-angle-down" aria-hidden="false"></i>
-            </span>
+            <span id="select-text">Select your State</sis-danger is-lightpan>
+              <span class="icon is-small">
+                <i class="fas fa-angle-down" aria-hidden="false"></i>
+              </span>
           </button>
         </div>
         <div class="dropdown-menu" role="menu">
@@ -94,71 +88,88 @@
           </div>
         </div>
       </div>
-          <br>
-          <br>
-
-      <!-- <div class="control">
-          <button class="button is-black has-text-white" id="submit">Submit</button>
-      </div> -->
-
-      <p>Your Health. Your Loved Ones. Your Data.</p>
-      <p>At your fingertips.</p>
-
     </div>
 
-  </div>
-  <!--Covid Art Center Piece - Lower Text & Input Field End-->
+    <!--Covid Art Center Piece & NavBar End-->
 
-  <!--National Covid Data Level Start-->
-  <div class="column  is-vcentered">
-    <div class="card">
-      <header class="card-header">
-        <p class="card-header-title">U.S. National Data</p>
-      </header>
-      <div class="card-content">
-        <div class="content">
-            <nav class="level is-mobile">
+    <!--Covid Art Center Piece - Lower Text & Input Field Start-->
+    <div class="tile is-6">
+      <div class="container has-text-centered">
+        <p class="title">Covid Co-Pilot</p>
+        <img class="is-centered" src="images\covid.jpg">
+        <br>
+        <br>
+        <blockquote>
+          <p><strong>Your Health.</strong>
+            <strong>Your Loved Ones.</strong>
+            <strong>Your Data.</strong>
+            <strong>At your fingertips.</strong>
+        </blockquote>
+        </p>
+        <br>
+        <br>
+      </div>
+    </div>
+    <!--Covid Art Center Piece - Lower Text & Input Field End-->
+
+    <!--National Covid Data Level Start-->
+    <div class="tile is-3 p-4 m-3">
+      <div class="column  is-centered">
+        <div class="card">
+          <header class="card-header">
+            <p class="card-header-title">U.S. National Data</p>
+          </header>
+          <nav class="level is-mobile "></nav>
+          <div class="content is-mobile">
+            <div class="card-content">
               <div class="level-item has-text-centered">
                 <div>
                   <p class="heading">Total Cases</p>
                   <p class="title" id="national-total-cases"></p>
                 </div>
               </div>
+              <br>
               <div class="level-item has-text-centered">
                 <div>
                   <p class="heading">Total New Cases</p>
                   <p class="title" id="national-new-cases"></p>
                 </div>
               </div>
+              <br>
               <div class="level-item has-text-centered">
                 <div>
                   <p class="heading">Fully Vaccinated</p>
                   <p class="title" id="fully-vaccinated"></p>
                 </div>
+            </div>
+            <br>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Single Dose Vaccinated</p>
+                <p class="title" id="single-dose"></p>
               </div>
-              <div class="level-item has-text-centered">           
-                <div>
-                  <p class="heading">Single Dose Vaccinated</p>
-                  <p class="title" id="single-dose"></p>
-                </div>
+            </div>
+            <br>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Hospitalizations</p>
+                <p class="title" id="hospitalizations"></p>
               </div>
-              <div class="level-item has-text-centered">                
-                <div>
-                  <p class="heading">Hospitalizations</p>
-                  <p class="title" id="hospitalizations"></p>
-                </div>
+            </div>
+            <br>
+            <div class="level-item has-text-centered">
+              <div>
+                <p class="heading">Deaths</p>
+                <p class="title" id="deaths"></p>
               </div>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">COVID-Related Deaths</p>
-                  <p class="title" id="deaths"></p>
-                </div>
-              </div>              
-            </nav>
+            </div>
+            <br>
           </div>
         </div>
+        </nav>
       </div>
     </div>
+  </div>
   </div>
   <!--National Covid Data Level End-->
 
@@ -166,27 +177,27 @@
 
     <!--ICU Data-->
     <div class="column is-6">
-      <div class="card">
+
+      <div class="card mx-3">
         <header class="card-header">
-            <p class="card-header-title"><span id="icu-header"></span>&nbsp;I.C.U Beds Available</p>
+          <p class="card-header-title"><span id="icu-header"></span>&nbsp;I.C.U Beds Available</p>
         </header>
-        <div class="card-content">
+        <div class="card-content ">
           <div class="content" id="icu-data">
-              <br>
+            <br>
           </div>
         </div>
       </div>
     </div>
-
     <!--Vaccine Totals-->
     <div class="column is-6">
-      <div class="card">
+      <div class="card mx-3">
         <header class="card-header">
-              <p class="card-header-title"><span id="vaccine-header"></span>&nbsp; Vaccine Totals</p>
+          <p class="card-header-title"><span id="vaccine-header"></span>&nbsp; Vaccine Totals</p>
         </header>
         <div class="card-content">
           <div class="content" id="vaccine-data">
-                <br>      
+            <br>
           </div>
         </div>
       </div>
@@ -195,7 +206,7 @@
 
     <!--Hospitalization Totals-->
     <div class="column is-6">
-      <div class="card">
+      <div class="card mx-3">
         <header class="card-header">
           <p class="card-header-title"><span id="hospitalization-header"></span>&nbsp;Hospitalization Totals</p>
         </header>
@@ -210,9 +221,9 @@
 
     <!--Death Totals-->
     <div class="column is-6">
-      <div class="card">
+      <div class="card mx-3">
         <header class="card-header">
-          <p class="card-header-title" ><span id="deaths-header"></span>&nbsp;Death Totals</p>
+          <p class="card-header-title"><span id="deaths-header"></span>&nbsp;Death Totals</p>
         </header>
         <div class="card-content">
           <div class="content" id="state-deaths">
@@ -226,8 +237,7 @@
 
 
 
- <script src="script.js"></script>
- 
+  <script src="script.js"></script>
 </body>
 
 <footer class="footer">
@@ -241,7 +251,7 @@
       <br>
       <br>
       <strong>Covid Co-Pilot</strong> by <a href="https://github.com/maxaeon">Max</a> , <a
-        href="https://github.com/AdamHale88">Adam</a> , <a href="https://github.com/veggiepilot">Johannes</a> , and <a
+        href="https://github.com/AdamHale88">Adam</a> , <a href="https://github.com/veggiepilot">Johannes</a> , <a
         href="https://github.com/maxaeon">Andrew</a><br>The source code is licensed
       <a href="http://opensource.org/licenses/mit-license.php">MIT</a> The website content
       is licensed <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
