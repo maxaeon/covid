@@ -30,9 +30,10 @@ var dropdown                = document.getElementById('dropdown');
 var dropdownMenu            = document.getElementById('dropdown-menu');
 var dataCards               = document.getElementById('data-cards');
 var selectBtn               = document.getElementById('select-button');
-var selectText              = document.getElementById('select-text');
+var selectText              = document.getElementsByClassName('select');
 var dropdownContent         = document.getElementsByClassName('dropdown-content');
 
+// US states and abbreviations.
 var usStates = [
     { name: 'ALABAMA', abbreviation: 'AL'},
     { name: 'ALASKA', abbreviation: 'AK'},
@@ -95,22 +96,12 @@ var usStates = [
     { name: 'WYOMING', abbreviation: 'WY' }
 ]
 
-selectBtn.addEventListener('click', function(e) {
-    // Showing the state selections once the 'Select State' button is clicked
-    dropdownMenu.classList.add('is-active');
-    // Toggling back to show the states when the button is clicked again
-    dropdown.classList.remove('is-hidden');
-})
-
-dropdown.addEventListener('click', function(e) {
-    var selectedState = e.target.innerHTML;
+// Listening to a change in state.
+dropdown.addEventListener('change', function(e) {
+    var selectedState = dropdown.value;
     var locationInput = selectedState.toUpperCase().trim();
     for (var i = 0; i < usStates.length; i++) {
         if (locationInput === usStates[i].name) {
-            // Change the text on the select button
-            selectText.innerText = e.target.innerHTML;
-            // Hide the dropdown once a state has been selected
-            dropdown.classList.add('is-hidden');
             // get state abbreviation
             var stateAbbr = usStates[i].abbreviation;
             // Showing the data cards to the web page
@@ -120,6 +111,7 @@ dropdown.addEventListener('click', function(e) {
     }
 })
 
+// Fetching national data from API.
 function getNationalData() {
     fetch(baseURL + nationalData + apiKey)
         .then(function(response) {
@@ -131,6 +123,7 @@ function getNationalData() {
         })
 }
 
+// Rendering national data to the webpage.
 function renderNationalData(data) {
     totalNationalCases.innerText      = data.actuals.cases.toLocaleString('en-US');
     totalNationalNewCases.innerText   = data.actuals.newCases.toLocaleString('en-US');
@@ -140,6 +133,7 @@ function renderNationalData(data) {
     nationalDeaths.innerText          = data.actuals.deaths.toLocaleString('en-US');
 }
 
+// Fetching state data from API.
 function getStateData(state, stateName) {
     fetch(baseURL + '/state/' + state + '.timeseries.json' + apiKey)
         .then(function(response) {
@@ -151,6 +145,7 @@ function getStateData(state, stateName) {
         })
 }
 
+// Rendering state data to the webpage.
 function renderStateData(data, stateName) {
     icuHeader.innerText             = stateName;
     vaccineHeader.innerText         = stateName;
@@ -161,10 +156,6 @@ function renderStateData(data, stateName) {
     vaccineData.innerText = 'Vaccinations administered ' + data.actuals.vaccinesAdministered.toLocaleString('en-US');
     deaths.innerText = data.actuals.deaths.toLocaleString('en-US');
     hospitalizations.innerText = Math.round((data.actuals.hospitalBeds.currentUsageCovid / data.actuals.hospitalBeds.capacity) * 100)+'% of hositalizations are covid cases';
-
-    // 'Vaccinations initiated ' + state.actuals.vaccinationsInitiated.toLocaleString('en-US');
-    // 'Vaccinations distributed ' + state.actuals.vaccinesDistributed.toLocaleString('en-US');
-    // 'Vaccinations completed ' + data.actuals.vaccinationsCompleted.toLocaleString('en-US');
 }
 
 // var myChart = document.getElementById('myChart').getContext('2d');
@@ -180,5 +171,6 @@ function renderStateData(data, stateName) {
 //     }
 // })
 
+// Calling function to display US national data.
 getNationalData();
 
