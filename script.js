@@ -32,6 +32,10 @@ var dataCards               = document.getElementById('data-cards');
 var selectBtn               = document.getElementById('select-button');
 var selectText              = document.getElementsByClassName('select');
 var dropdownContent         = document.getElementsByClassName('dropdown-content');
+var newsAPIBaseUrl          = 'https://newsapi.org/v2/everything';
+var newsAPIKey              = '&apiKey=17cec498e9034317b102e559ff10f609';
+
+
 
 // US states and abbreviations.
 var usStates = [
@@ -96,6 +100,18 @@ var usStates = [
     { name: 'WYOMING', abbreviation: 'WY' }
 ]
 
+// Fetching news from API.
+// function fetchNews() {
+//     var req = new Request('https://newsapi.org/v2/everything?q=covid-19&from=2021-09-06&to=2021-09-13&apiKey=17cec498e9034317b102e559ff10f609');
+//     fetch(req)
+//         .then(function(response) {
+//             return response.json();
+//         })
+//         .then(function(data) {
+//             console.log(data);
+//         })
+// }
+
 // Listening to a change in state.
 dropdown.addEventListener('change', function(e) {
     var selectedState = dropdown.value;
@@ -152,11 +168,12 @@ function renderStateData(data, stateName) {
     hospitalizationHeader.innerText = stateName;
     deathsHeader.innerText          = stateName;
 
-    icuData.innerText = 'There are ' + (data.actuals.icuBeds.capacity - data.actuals.icuBeds.currentUsageTotal).toLocaleString('en-US') + ' ICU beds available.';
-    vaccineData.innerText = 'Vaccinations administered ' + data.actuals.vaccinesAdministered.toLocaleString('en-US');
+    icuData.innerText = 'There are ' + (data.actuals.icuBeds.capacity - data.actuals.icuBeds.currentUsageTotal).toLocaleString('en-US') + ' ICU bed(s) available.';
+    vaccineData.innerText = 'Vaccinations administered: ' + data.actuals.vaccinesAdministered.toLocaleString('en-US') + '.';
     deaths.innerText = data.actuals.deaths.toLocaleString('en-US');
-    hospitalizations.innerText = Math.round((data.actuals.hospitalBeds.currentUsageCovid / data.actuals.hospitalBeds.capacity) * 100)+'% of hositalizations are covid cases';
+    hospitalizations.innerText = Math.round((data.actuals.hospitalBeds.currentUsageCovid / data.actuals.hospitalBeds.capacity) * 100)+'% of hositalizations are COVID cases.';
 }
+
 
 // var myChart = document.getElementById('myChart').getContext('2d');
 
@@ -173,4 +190,5 @@ function renderStateData(data, stateName) {
 
 // Calling function to display US national data.
 getNationalData();
+
 
