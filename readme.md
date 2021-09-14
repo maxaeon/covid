@@ -2,6 +2,8 @@
 
 `Get your Local, National, and Continental COVID-19 Data in a simple Click`
 
+Our application is designed to provide COVID-19 information to users in an easy-to-access manner. Whereas most informational apps about COVID-19 display an overwhelming amount of information organized in a less-than-ideal fashion, our site is designed with the user in mind, so statistics about national and continental data is easily identifiable, and with a click of the mouse, users can access COVID-19 data specifically about their selected state.
+
 
 ## 🏆 "https://maxaeon.github.io/covid/" 🏆
 
