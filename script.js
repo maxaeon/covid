@@ -29,7 +29,7 @@ var dropdown                = document.getElementById('dropdown');
 var dropdownMenu            = document.getElementById('dropdown-menu');
 var dataCards               = document.getElementById('data-cards');
 var selectBtn               = document.getElementById('select-button');
-var selectText              = document.getElementsByClassName('select');
+var selectText              = document.getElementById('selected');
 var dropdownContent         = document.getElementsByClassName('dropdown-content');
 var continentDeaths         = document.getElementById('continent-deaths');
 var continentCases          = document.getElementById('continent-cases');
@@ -106,7 +106,9 @@ dropdown.addEventListener('change', function(e) {
             // get state abbreviation
             var stateAbbr = usStates[i].abbreviation;
             // Showing the data cards to the web page
-            dataCards.classList.remove('is-hidden');    
+            dataCards.classList.remove('is-hidden');
+            // Setting the local storage key and value.
+            localStorage.setItem('state', selectedState)     
             getStateData(stateAbbr, selectedState);
         }
     }
@@ -187,7 +189,6 @@ function renderContinentData(data) {
     // Getting sum of continent cases.
     for (var i = 0; i < continentCasesArray.length; i++) {
         continentCasesCount += continentCasesArray[i];
-        console.log(continentCasesCount);
         continentCases.innerText = continentCasesCount.toLocaleString('en-US');
     }
 
@@ -198,9 +199,20 @@ function renderContinentData(data) {
     }
 }
 
+// Getting the local storage data
+function getLocalStorageData() {
+    if (localStorage.getItem('state')) {
+        selectText.innerText = localStorage.getItem('state');
+    } else {
+        selectText.innerText = "Select your state";
+    }
+}
+
 // Calling function to display US national data.
 getNationalData();
 // Calling function to display North America data.
-getContinentData()
+getContinentData();
+// Calling the local storage data (if available).
+getLocalStorageData();
 
 
