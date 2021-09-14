@@ -21,44 +21,44 @@
           <nav class="level is-mobile "></nav>
           <div class="content is-mobile">
             <div class="card-content">
-              <div class="level-item has-text-centered">
+              <div class="level-item has-text-centered"> 
                 <div>
-                  <p class="heading">Total Cases</p>
+                  <p class="heading">Total Cases &nbsp;<i class="fas fa-briefcase-medical"></i></p>
                   <p class="title is-size-6" id="national-total-cases"></p>
                 </div>
               </div>
               <br>
-              <div class="level-item has-text-centered">
-                <div>
-                  <p class="heading">Total New Cases</p>
+              <div class="level-item has-text-centered">   
+                <div>     
+                  <p class="heading">Total New Cases &nbsp;<i class="fas fa-briefcase-medical"></i></p>
                   <p class="title is-size-6" id="national-new-cases"></p>
                 </div>
               </div>
               <br>
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="heading">Fully Vaccinated</p>
+                  <p class="heading">Fully Vaccinated &nbsp;<i class="fas fa-syringe"></i></p>
                   <p class="title is-size-6" id="fully-vaccinated"></p>
                 </div>
               </div>
               <br>
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="heading">Single Dose Vaccinated</p>
+                  <p class="heading">Single Dose Vaccinated &nbsp;<i class="fas fa-syringe"></i></p>
                   <p class="title is-size-6" id="single-dose"></p>
                 </div>
               </div>
               <br>
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="heading">Hospitalizations</p>
+                  <p class="heading">Hospitalizations &nbsp;<i class="fas fa-hospital"></i></p>
                   <p class="title is-size-6" id="hospitalizations"></p>
                 </div>
               </div>
               <br>
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="heading">Deaths</p>
+                  <p class="heading">Deaths &nbsp; <i class="fas fa-skull-crossbones"></i></p>
                   <p class="title is-size-6" id="deaths"></p>
                 </div>
               </div>
@@ -77,8 +77,12 @@
             <!--Covid Art Center Piece - Lower Text & Input Field Start-->
     <div class="tile is-4 mt-5 is-mobile" id="center">
       <div class="container has-text-centered is-flex is-flex-direction-column ">
-        <p class="title">COVID Co-Pilot
+        <p class="title"><span class="icon-text">COVID Co-Pilot &nbsp;<span class="icon">
+            <i class="fas fa-plane"></i>
+          </span>
+        </span>
         <br>
+
           <small>U.S. Version</small></p>
         <div class="tile is-flex is-justify-content-center is-align-content-center">
           <div class="control has-icons-left">
@@ -164,15 +168,17 @@
             <div class="card-content">
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="heading">Total Confirmed Cases</p>
+                  <p class="heading">Total Confirmed Cases &nbsp;<i class="fas fa-briefcase-medical"></i></p>
                   <p class="title is-size-6" id="continent-cases"></p>
+                  </div>
                 </div>
               </div>
               <br>
               <div class="level-item has-text-centered">
                 <div>
-                  <p class="heading" >Total Confirmed Deaths</p>
+                  <p class="heading" >Total Confirmed Deaths &nbsp;<i class="fas fa-skull-crossbones"></i></p>
                   <p class="title is-size-6" id="continent-deaths"></p>
+                  </div>
                 </div>
               </div>
               <footer>
@@ -203,11 +209,23 @@
 
         <div class="card mx-3">
           <header class="card-header">
-            <p class="card-header-title"><span id="icu-header"></span>&nbsp;ICU Beds Available</p>
+            <p class="card-header-title">
+              <span id="icu-header"></span>&nbsp;ICU Beds Available &nbsp;<i class="fas fa-procedures">
+              </i></p>
           </header>
-          <div class="card-content ">
+          <div class="card-content">              
+            <div class="icon-text">
+                <span class="icon has-text-danger is-hidden">
+                  <i class="fas fa-ban is-right"></i>
+                </span>
+                <span class="icon-text has-text-success">
+                  <span class="icon">
+                    <i class="fas fa-check-square"></i>
+                  </span>
+                </span>
             <div class="content" id="icu-data">
               <br>
+              </div>
             </div>
           </div>
         </div>
@@ -219,7 +237,7 @@
       <div class="column is-6">
         <div class="card mx-3">
           <header class="card-header">
-            <p class="card-header-title"><span id="vaccine-header"></span>&nbsp; Vaccine Totals</p>
+            <p class="card-header-title"><span id="vaccine-header"></span>&nbsp; Vaccine Totals &nbsp;<i class="fas fa-syringe"></i></p>
           </header>
           <div class="card-content">
             <div class="content" id="vaccine-data">
@@ -235,7 +253,7 @@
       <div class="column is-6">
         <div class="card mx-3">
           <header class="card-header">
-            <p class="card-header-title"><span id="hospitalization-header"></span>&nbsp;Hospitalization Totals</p>
+            <p class="card-header-title"><span id="hospitalization-header"></span>&nbsp;Hospitalization Totals &nbsp;<i class="fas fa-hospital"></i></p>
           </header>
           <div class="card-content">
             <div class="content" id="state-hospitalizations">
@@ -251,7 +269,9 @@
       <div class="column is-6">
         <div class="card mx-3">
           <header class="card-header">
-            <p class="card-header-title"><span id="deaths-header"></span>&nbsp;Death Totals</p>
+                <p class="card-header-title">
+                  <span id="deaths-header"></span>&nbsp; Death Totals &nbsp;<i class="fas fa-skull-crossbones">             
+                  </i></p>
           </header>
           <div class="card-content">
             <div class="content" id="state-deaths">
