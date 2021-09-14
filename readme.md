@@ -1,13 +1,16 @@
 # 📖 " Covid Co-Pilot"
 
-`Get your Local Covid-19 Data in a simple Click`
+`Get your Local, National, and Continental COVID-19 Data in a simple Click`
+
+Our application is designed to provide COVID-19 information to users in an easy-to-access manner. Whereas most informational apps about COVID-19 display an overwhelming amount of information organized in a less-than-ideal fashion, our site is designed with the user in mind, so statistics about national and continental data is easily identifiable, and with a click of the mouse, users can access COVID-19 data specifically about their selected state.
 
 
 ## 🏆 "https://maxaeon.github.io/covid/" 🏆
 
  &nbsp;  
 
-<img src="images\covid.png"/>
+![Screenshot (95)](https://user-images.githubusercontent.com/87254760/133179216-a073e1a8-9c29-4c1b-b8b3-06db38d475cf.png)
+
  &nbsp;  
 
 ## Languages:
@@ -27,46 +30,14 @@
 &nbsp;
 
 ## APIs:
-https://apidocs.covidactnow.org/#register 
+https://apidocs.covidactnow.org/
 
-https://rapidapi.com/pillious/api/who-covid-19-data/
+https://github.com/M-Media-Group/Covid-19-API
 
 
 &nbsp;   
-
-## 📝 Some Features:
 &nbsp; 
 
-|`lorem`| 
-|-|
-|Functon to deploy a smooth mobile layout. Currently not deployed.
-
-&nbsp;
-
-|`lorem`| 
-|-|
-|To provide a nice layer of depth to elemets. |
-
-&nbsp;
-
-|`lorem`| 
-|-|
-|This allows for some beautiful animations.
-
- &nbsp;
-
-|`lorem`| 
-|-|
-|This feature allows me to control the flow of the page, An generate a responsive layout.
-
- &nbsp;
-
-|`lorem`|
-|-|
-|You are seeing a live deployment of exploring some new markdown functions. 
-
-&nbsp;
-&nbsp;
 
 ## 🏆 Project Criteria
 
