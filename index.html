@@ -6,13 +6,13 @@
   <title>COVID Co-Pilot</title>
   <script src="https://kit.fontawesome.com/b89d79f88d.js" crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.3/css/bulma.min.css">
-  <link rel="stylesheet" src="style.css">
+  <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
-  <div class="columns m-4 is-multiline is-centered ">
-    <!--National Covid Data Level Startis-flex is-justify-content-space-evenly-->
-    <div class="tile is-3 p-4 m-3 is-child is-vertical is-mobile">
+    <!--National Covid Data Level Start-->
+  <main class=" columns is-flex m-4  is-justify-content-space-evenly is-multiline is-centered ">
+    <div class="tile  is-3 p-4 m-3 is-flex-direction-row shiftbelow">
       <div class="column is-centered">
         <div class="card is-flex is-flex-direction-column is-justify-content-center is-align-content-center">
           <header class="card-header">
@@ -75,71 +75,71 @@
     <!--National Covid Data Level End--
 
             <!--Covid Art Center Piece - Lower Text & Input Field Start-->
-    <div class="tile is-4 mt-5 is-mobile is-vertical">
+    <div class="tile is-4 mt-5 is-mobile" id="center">
       <div class="container has-text-centered is-flex is-flex-direction-column ">
         <p class="title">COVID Co-Pilot</p>
         <div class="tile is-flex is-justify-content-center is-align-content-center">
-            <div class="control has-icons-left">
-              
-              <div class="select">
-                  <select id="dropdown">
-                    <option><a class="selected">Select Your State</a></option>
-                    <option>Alabama</option>
-                    <option>Alaska</option>
-                    <option>Arizona</option>
-                    <option>Arkansas</option>
-                    <option>California</option>
-                    <option>Colorado</option>
-                    <option>Connecticut</option>
-                    <option>Delaware</option>
-                    <option>Florida</option>
-                    <option>Georgia</option>
-                    <option>Hawaii</option>
-                    <option>Idaho</option>
-                    <option>Illinois</option>
-                    <option>Indiana</option>
-                    <option>Iowa</option>
-                    <option>Kansas</option>
-                    <option>Kentucky</option>
-                    <option>Louisiana</option>
-                    <option>Maine</option>
-                    <option>Maryland</option>
-                    <option>Massachusetts</option>
-                    <option>Michigan</option>
-                    <option>Minnesota</option>
-                    <option>Mississippi</option>
-                    <option>Missouri</option>
-                    <option>Montana</option>
-                    <option>Nebraska</option>
-                    <option>Nevada</option>
-                    <option>New Hampshire</option>
-                    <option>New Jersey</option>
-                    <option>New Mexico</option>
-                    <option>New York</option>
-                    <option>North Carolina</option>
-                    <option>North Dakota</option>
-                    <option>Ohio</option>
-                    <option>Oklahoma</option>
-                    <option>Oregon</option>
-                    <option>Pennsylvania</option>
-                    <option>Rhode Island</option>
-                    <option>South Carolina</option>
-                    <option>South Dakota</option>
-                    <option>Tennessee</option>
-                    <option>Texas</option>
-                    <option>Utah</option>
-                    <option>Vermont</option>
-                    <option>Virginia</option>
-                    <option>Washington</option>
-                    <option>West Virginia</option>
-                    <option>Wisconsin</option>
-                    <option>Wyoming</option>
-                  </select>
-                </div>              
-              <span class="icon is-left">
-                <i class="fas fa-globe"></i>
-              </span>
+          <div class="control has-icons-left">
+
+            <div class="select">
+              <select id="dropdown">
+                <option><a class="selected">Select Your State</a></option>
+                <option>Alabama</option>
+                <option>Alaska</option>
+                <option>Arizona</option>
+                <option>Arkansas</option>
+                <option>California</option>
+                <option>Colorado</option>
+                <option>Connecticut</option>
+                <option>Delaware</option>
+                <option>Florida</option>
+                <option>Georgia</option>
+                <option>Hawaii</option>
+                <option>Idaho</option>
+                <option>Illinois</option>
+                <option>Indiana</option>
+                <option>Iowa</option>
+                <option>Kansas</option>
+                <option>Kentucky</option>
+                <option>Louisiana</option>
+                <option>Maine</option>
+                <option>Maryland</option>
+                <option>Massachusetts</option>
+                <option>Michigan</option>
+                <option>Minnesota</option>
+                <option>Mississippi</option>
+                <option>Missouri</option>
+                <option>Montana</option>
+                <option>Nebraska</option>
+                <option>Nevada</option>
+                <option>New Hampshire</option>
+                <option>New Jersey</option>
+                <option>New Mexico</option>
+                <option>New York</option>
+                <option>North Carolina</option>
+                <option>North Dakota</option>
+                <option>Ohio</option>
+                <option>Oklahoma</option>
+                <option>Oregon</option>
+                <option>Pennsylvania</option>
+                <option>Rhode Island</option>
+                <option>South Carolina</option>
+                <option>South Dakota</option>
+                <option>Tennessee</option>
+                <option>Texas</option>
+                <option>Utah</option>
+                <option>Vermont</option>
+                <option>Virginia</option>
+                <option>Washington</option>
+                <option>West Virginia</option>
+                <option>Wisconsin</option>
+                <option>Wyoming</option>
+              </select>
             </div>
+            <span class="icon is-left">
+              <i class="fas fa-globe"></i>
+            </span>
+          </div>
         </div>
         <figure>
           <img class="is-centered " src="images\covid.jpg">
@@ -150,7 +150,7 @@
     <!--Covid Art Center Piece - Lower Text & Input Field End-->
 
     <!--Global Covid Data Level Start-->
-    <div class="tile is-3 p-4 m-3 is-child is-vertical is-mobile">
+    <div class="tile is-3 p-4 m-3 shiftbelow">
       <div class="column is-centered">
         <div class="card is-flex is-flex-direction-column is-justify-content-center is-align-content-center">
           <header class="card-header">
@@ -216,103 +216,101 @@
 
     <!--Global Covid Data Level End-->
 
-  </div>
 
 
 
-  <!-- <!--State Selected Covid Data Cards->!> -->
 
-  <div class="columns m-4 is-multiline is-hidden" id="data-cards">
+    <!-- <!--State Selected Covid Data Cards->!> -->
+
+    <div class="columns m-4 is-multiline is-hidden shiftowest " id="data-cards">
 
 
-    <!--ICU Data-->
-    <div class="column is-6">
+      <!--ICU Data-->
+      <div class="column is-6">
 
-      <div class="card mx-3">
-        <header class="card-header">
-          <p class="card-header-title"><span id="icu-header"></span>&nbsp;ICU Beds Available</p>
-        </header>
-        <div class="card-content ">
-          <div class="content" id="icu-data">
-            <br>
+        <div class="card mx-3">
+          <header class="card-header">
+            <p class="card-header-title"><span id="icu-header"></span>&nbsp;ICU Beds Available</p>
+          </header>
+          <div class="card-content ">
+            <div class="content" id="icu-data">
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--ICU Data End-->
+
+
+      <!--Vaccine Totals-->
+      <div class="column is-6">
+        <div class="card mx-3">
+          <header class="card-header">
+            <p class="card-header-title"><span id="vaccine-header"></span>&nbsp; Vaccine Totals</p>
+          </header>
+          <div class="card-content">
+            <div class="content" id="vaccine-data">
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Vaccine Data End-->
+
+
+      <!--Hospitalization Totals-->
+      <div class="column is-6">
+        <div class="card mx-3">
+          <header class="card-header">
+            <p class="card-header-title"><span id="hospitalization-header"></span>&nbsp;Hospitalization Totals</p>
+          </header>
+          <div class="card-content">
+            <div class="content" id="state-hospitalizations">
+              <br>
+            </div>
+          </div>
+        </div>
+      </div>
+      <!--Hospitalization Totals End-->
+
+
+      <!--Death Totals-->
+      <div class="column is-6">
+        <div class="card mx-3">
+          <header class="card-header">
+            <p class="card-header-title"><span id="deaths-header"></span>&nbsp;Death Totals</p>
+          </header>
+          <div class="card-content">
+            <div class="content" id="state-deaths">
+              <br>
+            </div>
           </div>
         </div>
       </div>
     </div>
-    <!--ICU Data End-->
+    <!--Death Totals End-->
+  </main>
 
-
-    <!--Vaccine Totals-->
-    <div class="column is-6">
-      <div class="card mx-3">
-        <header class="card-header">
-          <p class="card-header-title"><span id="vaccine-header"></span>&nbsp; Vaccine Totals</p>
-        </header>
-        <div class="card-content">
-          <div class="content" id="vaccine-data">
-            <br>
-          </div>
-        </div>
-      </div>
+  <footer class="footer">
+    <div class="content has-text-centered">
+      <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home" class="navbar-center">Centers for Disease
+        Control and Prevention</a>
+      |
+      <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNRePmsDlMU3zdtrDzOdTnHfcmCvo-avDtdOmBZiumlkSaM__iXVS4aAsHvEALw_wcB"
+        class="navbar-center">World Health Organization</a>
+      <p>
+        <br>
+        <br>
+        <strong>COVID Co-Pilot</strong> by <a href="https://github.com/maxaeon">Max</a> , <a
+          href="https://github.com/AdamHale88">Adam</a> , <a href="https://github.com/veggiepilot">Johannes</a> , <a
+          href="https://github.com/maxaeon">Andrew</a><br>The source code is licensed:
+        <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
+        is licensed: <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
+        <br>
+        <a href="https://maxaeon.github.io/covid/disclaimer">Disclaimer</a>
+      </p>
     </div>
-    <!--Vaccine Data End-->
-
-
-    <!--Hospitalization Totals-->
-    <div class="column is-6">
-      <div class="card mx-3">
-        <header class="card-header">
-          <p class="card-header-title"><span id="hospitalization-header"></span>&nbsp;Hospitalization Totals</p>
-        </header>
-        <div class="card-content">
-          <div class="content" id="state-hospitalizations">
-            <br>
-          </div>
-        </div>
-      </div>
-    </div>
-    <!--Hospitalization Totals End-->
-
-
-    <!--Death Totals-->
-    <div class="column is-6">
-      <div class="card mx-3">
-        <header class="card-header">
-          <p class="card-header-title"><span id="deaths-header"></span>&nbsp;Death Totals</p>
-        </header>
-        <div class="card-content">
-          <div class="content" id="state-deaths">
-            <br>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-  <!--Death Totals End-->
-  </div>
-
+  </footer>
   <script src="script.js"></script>
 </body>
-
-<footer class="footer">
-  <div class="content has-text-centered">
-    <a href="https://covid.cdc.gov/covid-data-tracker/#datatracker-home" class="navbar-center">Centers for Disease
-      Control and Prevention</a>
-    |
-    <a href="https://www.who.int/emergencies/diseases/novel-coronavirus-2019?gclid=Cj0KCQjw-NaJBhDsARIsAAja6dNRePmsDlMU3zdtrDzOdTnHfcmCvo-avDtdOmBZiumlkSaM__iXVS4aAsHvEALw_wcB"
-      class="navbar-center">World Health Organization</a>
-    <p>
-      <br>
-      <br>
-      <strong>COVID Co-Pilot</strong> by <a href="https://github.com/maxaeon">Max</a> , <a
-        href="https://github.com/AdamHale88">Adam</a> , <a href="https://github.com/veggiepilot">Johannes</a> , <a
-        href="https://github.com/maxaeon">Andrew</a><br>The source code is licensed: 
-      <a href="http://opensource.org/licenses/mit-license.php">MIT</a>. The website content
-      is licensed: <a href="http://creativecommons.org/licenses/by-nc-sa/4.0/">CC BY NC SA 4.0</a>.
-      <br>
-      <a href="https://maxaeon.github.io/covid/disclaimer">Disclaimer</a>
-    </p>
-  </div>
-</footer>
-
 </html>
