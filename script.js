@@ -154,7 +154,7 @@ function renderStateData(data, stateName) {
     deathsHeader.innerText          = stateName;
 
     icuData.innerText = 'There are ' + (data.actuals.icuBeds.capacity - data.actuals.icuBeds.currentUsageTotal).toLocaleString('en-US') + ' ICU bed(s) available.';
-    vaccineData.innerText = data.actuals.vaccinesAdministered.toLocaleString('en-US') + ' COVID-19 vaccinations have been administered.';
+    vaccineData.innerText = data.actuals.vaccinesAdministered.toLocaleString('en-US') + ' vaccinations have been administered.';
     deaths.innerText = data.actuals.deaths.toLocaleString('en-US') + ' people have died from COVID-19.';
     hospitalizations.innerText = Math.round((data.actuals.hospitalBeds.currentUsageCovid / data.actuals.hospitalBeds.capacity) * 100)+'% of hospitalizations are COVID-19 cases.';
 }
