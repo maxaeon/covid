@@ -5,11 +5,11 @@
   }
 
   .shiftbelow {
-    order:1;
+    order:2;
   }
 
   .shiftlowest{
-    order:0;
+    order:1;
   }
 
   #center {
