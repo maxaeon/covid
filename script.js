@@ -108,7 +108,8 @@ dropdown.addEventListener('change', function(e) {
             // Showing the data cards to the web page
             dataCards.classList.remove('is-hidden');
             // Setting the local storage key and value.
-            localStorage.setItem('state', selectedState)     
+            localStorage.setItem('state', selectedState);
+            localStorage.setItem('state-abbr', stateAbbr);    
             getStateData(stateAbbr, selectedState);
         }
     }
@@ -202,7 +203,12 @@ function renderContinentData(data) {
 // Getting the local storage data
 function getLocalStorageData() {
     if (localStorage.getItem('state')) {
-        selectText.innerText = localStorage.getItem('state');
+        var stateName = localStorage.getItem('state');
+        var stateAbbr = localStorage.getItem('state-abbr');
+        // Changing the select state wording to reflect the selected state
+        selectText.innerText = stateName;
+        getStateData(stateAbbr, stateName);
+        dataCards.classList.remove('is-hidden');
     } else {
         selectText.innerText = "Select your state";
     }
