@@ -54,6 +54,6 @@ https://github.com/M-Media-Group/Covid-19-API
 &nbsp;
 &nbsp;
 
-## 💡 Group Collabrtors 
+## 💡 Group Collaborators 
 
 Max, Johannes, Andrew, Adam 
